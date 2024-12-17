@@ -1,0 +1,64 @@
+%% preamble
+
+% document template
+\documentclass{bcrre_assignment}
+
+% Document metadata
+% fill these in to update header, footer and titlepage
+\def\modulename{Module Name}
+\def\assignmenttitle{Assignment Title}
+\def\studentidnumber{Student ID Number}
+\def\datesubmitted{Date Submitted}
+
+% references
+\addbibresource{references.bib}
+
+%% document
+\begin{document}
+\pagenumbering{gobble}
+
+\maketitle
+
+\justifying %all text after title page is fully justified
+
+\chapter*{Executive Summary}
+
+\newpage
+
+\tableofcontents
+% stop all the tables / lists in this section being on seperate pages
+\begingroup \let\clearpage\relax 
+\listoffigures
+\listoftables
+% manual glossary, an enthusiastic student could use a table or explore the {glossaries} package
+\chapter*{Glossary / List of Abbreviations} 
+
+\endgroup
+%start page numbering at the first chapter
+\chapter{Introduction} \pagenumbering{arabic} 
+\parencite{elliott2014} %this is a placeholder citation to get the references section to show. Can be removed when work starts 
+
+\section{Aims \& Objectives}
+
+\section{Scope}
+
+\section{Methodology}
+
+\chapter{Background / Background Research (\textit{Optional Chapter})}
+
+\chapter{Case Studies (\textit{Optional Chapter})}
+
+\chapter{Analysis}
+
+\chapter{Conclusions}
+
+\printbibliography
+
+%% Add Appendicies
+\appendix
+\chapter{Appendix (Optional)}
+
+\section{Appendix Section}
+
+
+\end{document}
